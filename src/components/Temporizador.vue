@@ -25,11 +25,6 @@ export default defineComponent({
             cronometroRodando: false,
         }
     },
-    computed: {
-        tempoDecorrido(): string {
-            return new Date(this.tempoEmSegundos * 1000).toISOString().substring(11, 19)
-        }
-    },
     methods: {
         iniciar() {
             this.cronometro = setInterval(() => {
@@ -40,7 +35,7 @@ export default defineComponent({
 
         },
         finalizar() {
-            this.cronometroRodando = !this.cronometroRodando
+            this.cronometroRodando = false
             clearInterval(this.cronometro)
             this.$emit('aoTemporizadorFinalizado', this.tempoEmSegundos)
             this.tempoEmSegundos = 0

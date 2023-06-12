@@ -17,6 +17,8 @@ export default defineComponent({
     },
     computed: {
         tempoDecorrido(): string {
+            console.log(this.tempoEmSegundos);
+
             return new Date(this.tempoEmSegundos * 1000).toISOString().substring(11, 19)
         },
     }
