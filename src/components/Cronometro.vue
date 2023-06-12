@@ -1,7 +1,6 @@
 <template>
     <section>
         <strong>{{ tempoDecorrido }}</strong>
-        minutos
     </section>
 </template>
 
