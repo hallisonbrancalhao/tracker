@@ -3,6 +3,7 @@
     <div class="columns">
       <div class="column is-7">{{ tarefa.descricao || 'Tarefa sem descrição' }}</div>
       <div class="column">
+        <p>Duração:</p>
         <Cronometro :tempoEmSegundos="tarefa.duracaoEmSegundos" />
       </div>
     </div>
