@@ -31,6 +31,7 @@
 <script lang="ts">
 import IProjeto from '@/interfaces/IProjeto';
 import { defineComponent } from 'vue';
+import { useStore } from '@/store'
 
 export default defineComponent({
     name: 'ProjetosView',
@@ -48,6 +49,12 @@ export default defineComponent({
             }
             this.projetos.push(projeto)
             this.nomeDoProjeto = ''
+        }
+    },
+    setup() {
+        const store = useStore()
+        return {
+            store
         }
     }
 })
