@@ -1,15 +1,17 @@
-import { RouteRecordRaw, createRouter, createWebHashHistory } from "vue-router";
-import TarefasView from "../view/tarefas.vue";
-import ProjetosView from "../view/projetos.vue";
+import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
+import Tarefas from "../view/tarefas.vue";
 
-const routes: RouteRecordRaw[] = [
-  { path: "/", name: "tarefas", component: TarefasView },
-  { path: "/projetos", name: "Projetos", component: ProjetosView },
+const rotas: RouteRecordRaw[] = [
+  {
+    path: "/",
+    name: "Tarefas",
+    component: Tarefas,
+  },
 ];
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes: routes,
+  routes: rotas,
 });
 
 export default router;
