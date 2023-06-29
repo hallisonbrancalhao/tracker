@@ -1,7 +1,10 @@
-import { createApp } from "vue";
-import App from "./App.vue";
+import { createApp } from 'vue'
+import App from './App.vue'
+import '@fortawesome/fontawesome-free/css/all.css'
+import roteador from './roteador'
+import { key, store } from './store'
 
-import "@fortawesome/fontawesome-free/css/all.css";
-import router from "./router";
-
-createApp(App).use(router).mount("#app");
+createApp(App)
+    .use(roteador)
+    .use(store, key)
+    .mount('#app')
