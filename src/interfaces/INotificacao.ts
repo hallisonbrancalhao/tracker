@@ -14,4 +14,5 @@ export interface INotificacao {
 export interface Idays {
   id: number;
   days: number;
+  test: boolean;
 }
